@@ -56,16 +56,14 @@ const CustomListImage: types.Brick<TextImageProps> = ({
             : 'md:flex-row-reverse md:space-x-reverse'
         )}
       >
+                    <Fade bottom duration={2000} distance="20px">
         <div
           className={classNames(
             'w-full md:flex-1 flex flex-col',
             imageSide === 'right' ? 'md:pr-1/10' : 'md:pl-1/10'
           )}
         >
-          <AnimationContainer
-            imageSide={imageSide === 'right' ? false : true}
-            duration={1000}
-          >
+          
             <Repeater
               propName="badge"
               renderWrapper={(items) => (
@@ -107,12 +105,8 @@ const CustomListImage: types.Brick<TextImageProps> = ({
                 </span>
               )}
             />
-          </AnimationContainer>
 
-          <AnimationContainer
-            imageSide={imageSide === 'right' ? false : true}
-            duration={1000}
-          >
+
             <RichText
               propName="text"
               renderBlock={(props) => (
@@ -137,12 +131,8 @@ const CustomListImage: types.Brick<TextImageProps> = ({
                 </Link>
               )}
             />
-          </AnimationContainer>
 
-          <AnimationContainer
-            imageSide={imageSide === 'right' ? false : true}
-            duration={1500}
-          >
+          
             <div>
               <Repeater
                 propName="bulletListItems"
@@ -200,7 +190,6 @@ const CustomListImage: types.Brick<TextImageProps> = ({
                 </div>
               )}
             />
-          </AnimationContainer>
         </div>
         {multiple ? (
           <div className="flex w-full md:w-2/5 lg:w-1/2 max-w-xs md:max-w-sm mx-auto mt-10 md:mt-0 flex-wrap justify-center -mb-6">
@@ -214,10 +203,7 @@ const CustomListImage: types.Brick<TextImageProps> = ({
               'md:w-2/5 md:mt-0 md:mb-0 flex justify-center'
             )}
           >
-            <AnimationContainer
-              imageSide={imageSide === 'right' ? true : false}
-              duration={2000}
-            >
+              
               <Image
                 propName="imageSource"
                 alt="Image"
@@ -226,29 +212,15 @@ const CustomListImage: types.Brick<TextImageProps> = ({
                   { 'shadow-2xl': hasShadow }
                 )}
               />
-            </AnimationContainer>
           </div>
         )}
+        </Fade>
       </Container>
     </Section>
   )
 }
 
-const AnimationContainer = ({ imageSide, duration, children }) => {
-  if (imageSide === true) {
-    return (
-      <Fade duration={duration} right>
-        {children && children}
-      </Fade>
-    )
-  } else {
-    return (
-      <Fade duration={duration} left>
-        {children && children}
-      </Fade>
-    )
-  }
-}
+
 
 CustomListImage.schema = {
   name: 'list-image',
