@@ -13,7 +13,7 @@ const Seo: React.FC<SeoProps> = ({ title = '', description = '', lang = 'en', me
     <Helmet
       htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={`%s | React Bricks`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,

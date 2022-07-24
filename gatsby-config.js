@@ -11,7 +11,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#F65A8E`,
         display: `minimal-ui`,
-        icon: `src/images/reactbricks-icon.svg`,
+        icon: `src/images/dp.png`,
       },
     },
     `gatsby-plugin-offline`,
