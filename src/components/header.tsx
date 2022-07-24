@@ -1,37 +1,81 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { useState } from "react";
+import { Icon } from "@iconify/react";
+const Header: React.FC = () => {
+    const [navbarOpen, setNavbarOpen] = React.useState(false);
+    return (
+        <>
+            <nav className="flex flex-wrap items-center justify-between  px-2 py-3 bg-gray-900 mb-3 md:fixed w-[100%] z-[999]">
+                <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+                    <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                        <a
+                            className="text-[1.5rem] font-bold leading-relaxed inline-block mr-4 py-1 whitespace-nowrap  text-white"
+                            href="#pablo"
+                        >
+                            m.hamza()
+                        </a>
+                        <button
+                            className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                            type="button"
+                            onClick={() => setNavbarOpen(!navbarOpen)}
+                        >
+                            <Icon icon="fa6-solid:bars" />
+                        </button>
+                    </div>
+                    <div
+                        className={"lg:flex flex-grow items-center" + (navbarOpen ? " flex" : " hidden")}
+                        id="example-navbar-danger"
+                    >
+                        <ul
+                            className={`${
+                                navbarOpen ? "w-[100%] items-center	" : ""
+                            }flex flex-col lg:flex-row list-none lg:ml-auto`}
+                        >
+                            <li className="nav-item">
+                                <a
+                                    className="text-[1rem] rounded-lg px-3 py-2 flex items-center text-xs  font-bold leading-snug text-white hover:bg-sky-500"
+                                    href="/"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a
+                                    className="text-[1rem] rounded-lg px-3 py-2 flex items-center text-xs  font-bold leading-snug text-white hover:bg-sky-500"
+                                    href="/education"
+                                >
+                                    Education
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a
+                                    className="text-[1rem] rounded-lg px-3 py-2 flex items-center text-xs  font-bold leading-snug text-white hover:bg-sky-500"
+                                    href="/experience"
+                                >
+                                    Experience
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a
+                                    className="text-[1rem] rounded-lg px-3 py-2 flex items-center text-xs  font-bold leading-snug text-white hover:bg-sky-500 "
+                                    href="/projects"
+                                >
+                                    Projects
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a
+                                    className="text-[1rem] rounded-lg px-3 py-2 flex items-center text-xs  font-bold leading-snug text-white bg-sky-500 md:ml-2 hover:opacity-75"
+                                    href="https://drive.google.com/file/d/18w6brAacTK9bfgfFr_Ayyqg5yuoNQYK0/view"
+                                >
+                                    Resume
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </>
+    );
+};
 
-const Header: React.FC = () => (
-  <header className="bg-white sm:h-20 py-5 border-b sm:sticky top-0">
-    <div className="max-w-5xl mx-auto px-6">
-      <div className="w-full flex flex-col sm:flex-row justify-center sm:justify-between items-center">
-        <div className="flex flex-col sm:flex-row items-center mb-4 sm:mb-0">
-          <img
-            src="/react-bricks-logo.svg"
-            className="w-48"
-            alt="React Bricks"
-          />
-          <div className="sm:ml-8 flex space-x-5 text-center">
-            <Link to="/" className="text-gray-500 hover:text-pink-700">
-              Home
-            </Link>
-            <Link to="/about-us" className="text-gray-500 hover:text-pink-700">
-              About us
-            </Link>
-            <Link to="/blog" className="text-gray-500 hover:text-pink-700">
-              Blog
-            </Link>
-          </div>
-        </div>
-        <a
-          href="/admin"
-          className="py-2 px-5 rounded text-white font-medium bg-cyan-500 hover:bg-cyan-600 hover:shadow-lg transition duration-200"
-        >
-          Edit content
-        </a>
-      </div>
-    </div>
-  </header>
-)
-
-export default Header
+export default Header;

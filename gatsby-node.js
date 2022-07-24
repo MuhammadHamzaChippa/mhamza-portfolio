@@ -23,6 +23,8 @@ exports.createPages = async ({ actions: { createPage } }) => {
     return
   }
 
+  
+
   const { items: tags } = await fetchTags(apiKey)
   tags.sort()
 
