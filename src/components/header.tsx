@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
-import Fade from "react-reveal/Fade";
 const Header: React.FC = () => {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
-        <Fade top duration={2000} distance="20px">
+        <>
             <nav className="flex flex-wrap items-center justify-between  px-2 py-3 bg-gray-900  md:fixed w-[100%] z-[999]">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
@@ -75,7 +74,7 @@ const Header: React.FC = () => {
                     </div>
                 </div>
             </nav>
-        </Fade>
+        </>
     );
 };
 
