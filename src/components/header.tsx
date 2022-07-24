@@ -4,7 +4,7 @@ const Header: React.FC = () => {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
         <>
-            <nav className="flex flex-wrap items-center justify-between  px-2 py-3 bg-gray-900 mb-3 md:fixed w-[100%] z-[999]">
+            <nav className="flex flex-wrap items-center justify-between  px-2 py-3 bg-gray-900  md:fixed w-[100%] z-[999]">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <a
