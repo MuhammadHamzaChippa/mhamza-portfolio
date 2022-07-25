@@ -165,7 +165,7 @@ const CustomTextImage: types.Brick<TextImageProps> = ({
                 className: 'w-fit text-lg',
               }}
               renderWrapper={(items) => (
-                <div className="mt-4 w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-5 ">
+                <div className="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-[15px]">
                   {items}
                 </div>
               )}

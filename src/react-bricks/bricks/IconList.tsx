@@ -43,7 +43,7 @@ const IconList: types.Brick<BulletListItemProps> = ({
             <Text
                 propName="text"
                 renderBlock={(props) => (
-                    <span className={classNames("dark:text-gray-100", color.className2 , `${isIcon ? "lg:opacity-100 md:opacity-100 opacity-0 " : ""}` )} {...props.attributes}>
+                    <span className={classNames("dark:text-gray-100", color.className2  )} {...props.attributes}>
                         {props.children}
                     </span>
                 )}
