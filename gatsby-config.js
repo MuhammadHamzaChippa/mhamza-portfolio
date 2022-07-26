@@ -9,7 +9,7 @@ module.exports = {
         short_name: `React Bricks Starter`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#F65A8E`,
+        theme_color: `#111827`,
         display: `minimal-ui`,
         icon: `src/images/dp.png`,
       },
