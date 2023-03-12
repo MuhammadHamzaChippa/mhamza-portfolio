@@ -65,7 +65,7 @@ const Header: React.FC = () => {
                             <li className="nav-item">
                                 <a
                                     className="text-[1rem] rounded-lg px-3 py-2 flex items-center text-xs  font-bold leading-snug text-white bg-sky-500 md:ml-2 hover:opacity-75"
-                                    href="https://drive.google.com/file/d/18w6brAacTK9bfgfFr_Ayyqg5yuoNQYK0/view"
+                                    href="https://drive.google.com/file/d/19_HSy5fj-S_WpojeejiGY5iV51kJjJ96/view?usp=sharing"
                                 >
                                     Resume
                                 </a>
